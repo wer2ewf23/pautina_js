@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15px;
+    width: 500px;
+    padding: 50px;
+    background-color: none;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+.inputName{
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+.author{
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+.text{
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+.date{
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+.button{
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+
+
+.user_container{
+max-width: 1920px;
+margin: 0 auto;
+}
+.user_content{
+    padding-top: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   grid-gap: 50px;
+}
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 50px;
+}
+.user_item{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+grid-gap: 35px;
+padding: 15px;
+max-width: 700px;
+width: 560px;
+height: auto;
+background-color: none;
+border: 1px solid #C0C0C0;
+border-radius: 15px;
+
+}
+
+.title_date{
+    display: flex;
+    grid-gap: 300px;
+    align-items: center;
+}
+.name{
+   
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.subtitle{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-right: 500px;
+    
+}
+.text_{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.date_{
+    color: #C0C0C0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
