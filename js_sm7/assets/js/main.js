@@ -1,57 +1,54 @@
-let users =[
-    
-]
+let news = []
+let maxId = 0;
 
-let inputName = document.querySelector('.inputName')
-let author = document.querySelector('.author')
-let text = document.querySelector('.text')
-let date = document.querySelector('.date')
-let button = document.querySelector('.button')
-let usersPlace = document.querySelector('.user')
+let inputName = document.getElementById('inputName')
+let inputText = document.getElementById('inputText')
+let inputAuthor = document.getElementById('inputAuthor')
+let inputDate = document.getElementById('inputDate')
+let submit = document.getElementById('submit')
+let newsPlace = document.querySelector(".news");
 
-function showUsers (){
-    usersPlace.innerHTML = ''
-        users.forEach(element =>{
-            usersPlace.innerHTML+= `
-            <div class="user_container">
-                <div class="user_content">
-                    <div class="users">
-                        <div class="user_item">
-                        <div class="title_date">
-                            <h3 class = "name">${element.name}</h3>
-                            <p class="date_">${element.date}</p>
-                        </div>
-                        <p class ="text_">${element.text}</p>
-                    
-                        <p class ="subtitle">${element.author}</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            
-            `
-        })
+function showArray(arr){
+  arr.forEach(y => {
+    newsPlace.insertAdjacentHTML(
+      "beforeend",
+      `<div class="new">
+      <div class="name_date">
+        <h2 class="name">
+        ${y.name}
+        </h2>
+        <p class="date">${y.date}</p>
+      </div>
+      <p class="text">
+      ${y.text}         
+      </p>
+      <div class="author_id">
+        <p class="author"> ${y.author}</p>
+        <p class="id">id: ${y.id}</p>
+      </div>
+    </div>`
+    );
+  })
 }
 
-function addUser(){
-    let object = {
-        name:inputName.value,
-        author:author.value,
-        text:text.value,
-        date:date.value,
-    }
-    users.push(object)
-    console.log(users)
-    inputName.value = ''
-    author.value = ''
-    text.value = ''
-    date.value = ''
 
-    showUsers()
+function addArray(){
+  let object = { 
+    name: inputName.value , 
+    author: inputAuthor.value , 
+    date: inputDate.value , 
+    text: inputText.value , 
+    id: ++ maxId
+  }
+  news.push(object)
+  newsPlace.innerHTML = ''
+  inputName.value = ''
+  inputAuthor.value = ''
+  inputDate.value = ''
+  inputText.value = ''
+  showArray(news)
 }
 
-button.addEventListener('click', addUser)
-
+submit.addEventListener('click', addArray)
 
 
