@@ -3,11 +3,13 @@ alert('Заранее спасибо за принятие практики')
 let button = document.querySelector('.button')
 button.addEventListener('click',function(){
     console.log('нажата и отжата кнопка')
+    button.style.background = 'blue'
 })
 
 // Нажата кнопка
 let button2 = document.querySelector('.button2')
 button2.addEventListener('mousedown',function(){
+    button2.style.background = 'red'
     console.log('нажата кнопка')
 })
 
@@ -15,6 +17,7 @@ button2.addEventListener('mousedown',function(){
 let button3 = document.querySelector('.button3')
 button3.addEventListener('mouseup',function(){
     console.log('нажата кнопка')
+    button3.style.background = 'blue'
 })
 
 // наведение курсора
